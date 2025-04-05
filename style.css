@@ -1,0 +1,142 @@
+/* Disposition Flexbox pour la page */
+.container {
+  display: flex;
+  height: 100vh; /* Occupe toute la hauteur de l'écran */
+}
+
+/* Sidebar à gauche */
+.sidebar {
+  width: 33%; /* 1/3 de l'écran */
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+
+/* Bloc fixe en haut de la sidebar */
+.sidebar-header {
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f4;
+  z-index: 10;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.sidebar .subtitle {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.sidebar .graph {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+/* Email et autres éléments inline */
+strong, a {
+  display: inline;
+}
+
+/* Contenu principal à droite */
+.main-content {
+  width: 67%;
+  padding: 20px;
+}
+
+/* Liens de navigation en haut */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  background-color: #264653;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  background-color: #264653;
+  transform: translateY(-2px);
+}
+
+/* Titres et paragraphes */
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+/* Sidebar spécifique aux pages enseignement et lycée */
+.page-enseignement .sidebar-links,
+.page-lycee .sidebar-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 15px;
+}
+
+.sidebar-links a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #264653;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-links a:hover {
+  background-color: #264653;
+  transform: translateX(5px);
+}
+
+/* Liens vers fichiers PDF */
+a[href$=".pdf"] {
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: bold;
+  box-shadow: none;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+}
+
+a[href$=".pdf"]:hover {
+  background-color: #cfcfcf;
+  transform: translateY(-2px);
+}
+
+/* Icône devant les fichiers PDF */
+a[href$=".pdf"]::before {
+  content: "📄 ";
+  margin-right: 4px;
+}
