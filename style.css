@@ -140,3 +140,52 @@ a[href$=".pdf"]::before {
   content: "📄 ";
   margin-right: 4px;
 }
+
+
+
+
+
+
+/* Adaptation pour les écrans de Smartphones */
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Affiche sidebar au-dessus du contenu */
+    height: auto; /* Ne bloque pas la hauteur */
+  }
+
+  .sidebar,
+  .main-content {
+    width: 100%; /* Les deux prennent toute la largeur */
+  }
+
+  .sidebar-header {
+    position: static; /* Plus de sticky sur petit écran */
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Liens en colonne */
+    gap: 10px;
+  }
+
+  .nav-links a {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 90%;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
